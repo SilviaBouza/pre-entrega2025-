@@ -1,0 +1,346 @@
+/* ====== IMPORTACIÓN DE FUENTES ====== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ====== RESETEO GENERAL ====== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ====== VARIABLES GLOBALES ====== */
+:root {
+    --color-principal: antiquewhite;
+    --color-secundario: rgb(215, 126, 8);
+    --color-texto: rgb(90, 53, 4);
+    --color-dorado: #d4af37;
+    --color-fondo-oscuro: #222;
+    --color-fondo-claro: #fff;
+    --color-hover: #ffd700;
+}
+
+/* ====== ESTILOS BASE ====== */
+body {
+    background-size: cover;
+    background-attachment: scroll;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ====== CABECERA ====== */
+.cabecera {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo izquierda, texto centrado */
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+.logo-orelia {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    left: 20px; /* logo hacia el extremo izquierdo */
+}
+
+.cabecera h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--color-dorado);
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    margin: 0 auto; /* centra el texto en el medio */
+    text-align: center;
+    flex: 1;
+}
+
+.cabecera h1 span {
+    display: block;
+    font-size: 1.2rem;
+    color: #f8e7b5;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* ====== HEADER ====== */
+header {
+    background-color: var(--color-fondo-oscuro);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header .cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 60px;
+    height: auto;
+}
+
+/* ====== NAV ====== */
+nav {
+    background-color: #000;
+    border-top: 2px solid var(--color-dorado);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 5px 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-hover);
+    transform: scale(1.05);
+}
+
+/* ====== MAIN ====== */
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-fondo-claro);
+}
+
+main img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+main h2 {
+    margin-top: 15px;
+    color: #333;
+}
+
+/* ====== CONTENEDOR VIDEO ====== */
+.contenedor-video {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.contenedor-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ====== PRODUCTOS ====== */
+#producto {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#producto h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 260px;                     /* ancho uniforme */
+    height: 400px;                    /* alto fijo, evita cards desiguales */
+    border: 1.5px solid #d4af37;      /* borde dorado suave (solid) */
+    border-radius: 12px;              /* esquinas redondeadas */
+    overflow: hidden;                 /* recorta exceso de imagen o texto */
+    display: flex;
+    flex-direction: column;           /* organiza el contenido en columnas */
+    justify-content: space-between;   /* mantiene el botón al fondo */
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); /* sombra dorada sutil */
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(212, 175, 55, 0.5); /* sombra más intensa al pasar */
+}
+
+/*IMÁGENES UNIFORMES */
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    margin: 10px 0;
+    color: #a67c00; /* dorado más oscuro */
+    text-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+.card button {
+    background-color: #d4af37;    /* dorado elegante */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    margin-top: auto;
+    font-weight: bold;
+    cursor: pointer; transition: all 0.3s ease;
+    align-self: center; /* centra horizontalmente */
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.6); /* sombra atractiva */
+}
+
+.card button:hover {
+    background-color: #b8962e;
+    transform: scale(1.07);
+    box-shadow: 0 6px 14px rgba(212, 175, 55, 0.8); /* más brillo al pasar */
+}
+
+
+/* ====== FORMULARIO ====== */
+#contacto {
+    background-color: var(--color-fondo-claro);
+    margin: 40px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: var(--color-fondo-oscuro);
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+}
+
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 768px) {
+    header .cabecera {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .contenedor-video video {
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 480px) {
+    .logo-orelia {
+        width: 50px;
+    }
+    .card {
+        width: 95%;
+    }
+    #contacto {
+        padding: 20px;
+    }
+}
+
+}
+/* ====== BOTÓN ENVIAR ====== */
+#contacto button {
+    background-color: var(--color-secundario); /* usa tu color de acento */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* leve sombra para destacarlo */
+}
+
+#contacto button:hover {
+    background-color: #be9955; /* tono más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* leve movimiento al hover */
+}
+
+#contacto button:active {
+    transform: translateY(0); /* vuelve al lugar cuando se hace clic */
+}
