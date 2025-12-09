@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripcion</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product-detail.css">
+</head>
+
+<body>
+    <nav class="breadcrumb">
+<a href="../index.html">Inicio</a> › <span id="detalle-titulo">Cargando...</span>
+</nav>
+
+<section id="producto-detalle-contenedor" class="producto-detalle-contenedor">
+<p>Cargando producto...</p>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // 1️⃣ Obtener ID desde la URL
+    const params = new URLSearchParams(window.location.search);
+    const idProducto = parseInt(params.get("id"));
+
+    // Contenedores del HTML
+    const contenedorDetalle = document.getElementById("producto-detalle-contenedor");
+    const tituloBreadcrumb = document.getElementById("detalle-titulo");
+
+    // 2️⃣ Base de productos (mismo array que usas en index.js)
+    // (Puedes importar desde JS externo si prefieres)
+    const productosBase = [
+        { id: 1, nombre: "Pendientes Florales", precio: 12000, img: "../assets/img/Pendientes colgantes florales con baño de cobre dorado.webp", desc: "Baño de cobre dorado" },
+        { id: 2, nombre: "Aros Amarillos Dorados", precio: 8500, img: "../assets/img/aros amarillos dorados.jpg", desc: "Brillo intenso" },
+        { id: 3, nombre: "Mini Aros Gruesos", precio: 9200, img: "../assets/img/Mini aros gruesos.webp", desc: "Estilo minimalista" },
+        { id: 4, nombre: "Twin Metal Hoops", precio: 10500, img: "../assets/img/Twin Metal Hoops.jpg", desc: "Diseño doble" },
+        { id: 5, nombre: "Cadena Dije 3 Perlas", precio: 15000, img: "../assets/img/cadena dije 3 perlas.jpg", desc: "Elegancia clásica" },
+        { id: 6, nombre: "Cadena Corazón", precio: 13500, img: "../assets/img/cadena dije corazon.jpg", desc: "Romántico y sutil" },
+        { id: 7, nombre: "Cadena Mariposa", precio: 14000, img: "../assets/img/cadena dije mariposa.jpg", desc: "Inspiración natural" },
+        { id: 8, nombre: "Cadena Media Luna", precio: 13800, img: "../assets/img/cadena dije media luna.jpg", desc: "Estilo místico" },
+        { id: 9, nombre: "Collar Cadena Dorada", precio: 18000, img: "../assets/img/collar cadena dorada.jpg", desc: "Statement piece" },
+        { id: 10, nombre: "Brazalete Dorado", precio: 11000, img: "../assets/img/brazalete dorado.jpg", desc: "Ajustable" },
+        { id: 11, nombre: "Pulsera Esclava", precio: 10000, img: "../assets/img/pulcera esclava dorada.jpg", desc: "Rígida y brillante" },
+        { id: 12, nombre: "Pulsera Geométrica", precio: 9500, img: "../assets/img/pulsera con linea geometrica.jpg", desc: "Diseño moderno" },
+        { id: 13, nombre: "Pulsera Cordón", precio: 7500, img: "../assets/img/pulsera cordon.jpg", desc: "Casual chic" },
+        { id: 14, nombre: "Anillo Cinto Strass 2", precio: 8900, img: "../assets/img/anillo cinto con strass 2.jpg", desc: "Con detalles brillantes" },
+        { id: 15, nombre: "Anillo Cinto Strass", precio: 8900, img: "../assets/img/anillo cinto con strass.jpg", desc: "Clásico renovado" },
+        { id: 16, nombre: "Anillo Estrella", precio: 9100, img: "../assets/img/anillo estrella strass.jpg", desc: "Luz propia" }
+    ];
+
+    // 3️⃣ Buscar el producto por ID
+    const producto = productosBase.find(p => p.id === idProducto);
+
+    // 4️⃣ Mostrar detalle
+    if (!producto) {
+        contenedorDetalle.innerHTML = "<p>Producto no encontrado.</p>";
+        return;
+    }
+
+    tituloBreadcrumb.textContent = producto.nombre;
+
+    contenedorDetalle.innerHTML = `
+
+        <div class="detalle">
+            <img src="${producto.img}" alt="${producto.nombre}">
+            <div class="info">
+                <h2>${producto.nombre}</h2>
+                <p class="descripcion">${producto.desc}</p>
+                <p class="precio">Precio: <strong>$${producto.precio.toLocaleString()}</strong></p>
+
+                <button id="agregarDesdeDetalle" data-id="${producto.id}" class="btn-agregar">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+    `;
+            
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<!-- SCRIPT PARA SUMAR AL CARRITO -->
+<script src="../scripts/carrito.js"></script>
+
+
+</body>
+</html>
+

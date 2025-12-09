@@ -4,35 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talento Tech </title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <title>ORÉLIA | Joyería elegante y perfumes artesanales</title>
+
+    <meta name="description" content="ORÉLIA combina elegancia, luz y diseño para ofrecer joyería y perfumes artesanales únicos. Descubrí nuestros productos exclusivos.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Language" content="es">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/x-icon" href="/assets/img/logo_orelia.png">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
+
 <body>
+    <!--HEADER-->
 
     <header>
         <div class="cabecera">
             <div class="logo"></div>
-            <img src="./assets/img/logo_orelia.png" alt="Logo ORÉLIA" class="logo-orelia">
+            <img src="./assets/img/logo_orelia.png" alt="Logo ORÉLIA" class="logo-orelia" loading="lazy">
 
             <h1>ORÉLIA <span>Lumière et Élégance</span></h1>
+
         </div>
     </header>
 
-    <nav class="menu">
+    <!-- MENÚ -->
+    <nav class="menu-links">
         <ul>
             <li><a href="#">Inicio</a></li>
-
-            <li><a href="#producto">Producto</a></li>
-
-            <li><a href="#contacto">Contactos</a></li>
-
-            <li><a href="./pages/carrito.html">Carrito</a></li>
+            <li><a href="#producto" target="_self">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
+
+        <button id="btnCarrito" class="carrito-btn">
+
+            <span id="contadorCarrito">0</span>
+
+
+            <!-- ICONO SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M1 2h3l3 11m0 0h12l3-9M7 13l-1 4h15M7 21a1 1 0 1 1-2 0a1 1 0 
+                        0 1 2 0Zm14 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0ZM13 3v3m0 0v3m0-3h3m-3 
+                        0h-3" />
+            </svg>
+        </button>
     </nav>
 
+
     <main>
+        <!-- INICIO -->
         <section id="inicio" class="inicio">
             <h2>Inicio</h2>
             <div class="contenedor-video">
@@ -43,195 +66,100 @@
             </div>
         </section>
 
-
+        <!-- PRODUCTOS -->
         <section id="producto">
             <h3>Productos</h3>
+
             <div class="product">
 
-                <div class="card">
-                    <a href="./pages/descripcion.html">
-                        <h4>Nombre_Producto</h4>
-                        <img src="assets/img/Pendientes colgantes florales con baño de cobre dorado.webp"
-                            alt="Pendiente floral">
-                        <p>Descripcion breve</p>
-                        <p>Precio: <span>$xxx.xx</span></p>
-                        <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/aros amarillos dorados.jpg" alt="aros">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/Mini aros gruesos.webp" alt="aros gruesos">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/Twin Metal Hoops.jpg" alt="aros">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/cadena dije  3 perlas.jpg" alt="cadena con dije">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/cadena dije corazon.jpg" alt="cadena con dije">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
 
 
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/cadena dije mariposa.jpg" alt="cadena con dije">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/cadena dije media luna.jpg" alt="cadena con dije">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/collar cadena dorada.jpg" alt="Collar">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/brazalete dorado.jpg" alt="brazalete">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/pulcera esclava dorada.jpg" alt="pulseras">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/pulsera con linea geometrica.jpg" alt="pulsera">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/pulsera cordon.jpg" alt="pulsera">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/anillo cinto con strass 2.jpg" alt="anillo">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/anillo cinto con strass.jpg" alt="Producto1">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
-
-                <div class="card">
-                    <h4>Nombre Producto</h4>
-                    <a href="./pages/descripcion.html">
-                        <img src="assets/img/anillo estrella strass.jpg" alt="anillo">
-                    <p>Descripcion breve</p>
-                    <p>Precio: <span>$xxx.xx</span></p>
-                    <button>Comprar</button>
-                    </a>
-                </div>
             </div>
+
+
+        </section>
+        <!--==============================
+            SECCIÓN 6 – RESEÑAS DE CLIENTES
+            =============================== -->
+        <section id="reseñas" class="container mt-5 mb-5">
+            <h2 class="text-center mb-4">Reseñas de nuestros clientes</h2>
+
+            <div class="reseñas-container">
+
+                <div class="reseña-card">
+                    <h4>María González</h4>
+                    <div class="reseña-stars">★★★★★</div>
+                    <p class="reseña-text">
+                        La calidad es increíble y el envío llegó antes de tiempo. ¡Volveré a comprar!
+                    </p>
+                </div>
+
+                <div class="reseña-card">
+                    <h4>Carlos Rodríguez</h4>
+                    <div class="reseña-stars">★★★★☆</div>
+                    <p class="reseña-text">
+                        Excelente atención y productos de primera. Recomendado 100%.
+                    </p>
+                </div>
+
+                <div class="reseña-card">
+                    <h4>Sofía Alvarez</h4>
+                    <div class="reseña-stars">★★★★★</div>
+                    <p class="reseña-text">
+                        Todo perfecto, la presentación del producto es preciosa. Muy elegante.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!--CONTACTO-->
+
+        <section id="contacto">
+            <h3>Contacto</h3>
+            <form action="https://formbricks.com/" method="POST">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" required placeholder="Ingrese su nombre">
+
+                <label for="msj">Mensaje</label>
+                <textarea name="msj" id="msj" rows="5" cols="20" placeholder="Escriba su mensaje..."></textarea>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+
+            </form>
+        </section>
     </main>
 
-    </section>
-    <section id="reseña"></section>
-
-    <section id="contacto">
-        <h3>Contacto</h3>
-        <form action="https://formbricks.com/" method="POST">
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" required placeholder="Ingrese su nombre">
-
-            <label for="msj">Mensaje</label>
-            <textarea name="msj" id="msj" rows="5" cols="20" placeholder="Escriba su mensaje..."></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
+    <!-- FOOTER -->
     <footer>
         <p>© 2025 ORÉLIA. Todos los derechos reservados.</p>
         <p>Diseño y concepto creativo: Silvia Bouza</p>
     </footer>
+
+    <!-- PANEL DEL CARRITO -->
+    <div id="carritoPanel" class="carrito-panel">
+        <h3>Tu Carrito</h3>
+        <ul id="listaCarrito">
+        </ul>
+        <div class="total">
+            Total: $<span id="totalCarrito">0</span>
+        </div>
+        <button id="vaciarCarrito">Vaciar Carrito</button>
+    
+
+        <a class="comprar-btn" href="./pages/pago_exitoso.html">Finalizar compra</a>
+
+
+
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="../scripts/carrito.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+
 
 </body>
 

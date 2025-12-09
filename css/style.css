@@ -91,6 +91,10 @@ header img {
 nav {
     background-color: #000;
     border-top: 2px solid var(--color-dorado);
+    display: flex;
+    justify-content: space-between;  /* IZQUIERDA links – DERECHA carrito */
+    align-items: center;
+    padding: 10px 20px;
 }
 
 
@@ -119,6 +123,158 @@ nav a:hover {
     color: var(--color-hover);
     transform: scale(1.05);
 }
+
+/* =======================================================
+CARRITO LATERAL – ESTILO NEGRO / DORADO PREMIUM
+======================================================= */
+
+.carrito-panel {
+    position: fixed;
+    top: 0;
+    right: -350px;               /* oculto inicialmente */
+    width: 350px;
+    height: 100vh;
+    background: #000;            /* fondo negro */
+    border-left: 2px solid var(--color-dorado);
+    box-shadow: -4px 0 20px rgba(0,0,0,0.5);
+    padding: 22px;
+    transition: right .35s ease;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-dorado);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carrito-panel.abierto {
+    right: 0;
+}
+
+/* Título del carrito */
+.carrito-panel h3 {
+    color: var(--color-dorado);
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px rgba(212,175,55,0.6);
+}
+
+/* Lista de productos */
+#listaCarrito {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+#listaCarrito li {
+    background: #111;
+    border: 1px solid rgba(212,175,55,0.4);
+    color: #f4f4f4;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-shadow: 0 0 10px rgba(212,175,55,0.15);
+}
+
+/* Botones + / - y eliminar dentro del carrito */
+#listaCarrito button {
+    background: var(--color-dorado);
+    color: black;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .3s ease;
+    margin: 4px;
+}
+
+#listaCarrito button:hover {
+    background: #b8962e;
+    transform: scale(1.05);
+}
+
+/* Total */
+.total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px;
+    color: var(--color-dorado);
+    border-top: 1px solid rgba(212,175,55,0.4);
+}
+
+/* Botón Finalizar compra */
+.comprar-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-dorado);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .3s ease;
+    box-shadow: 0 4px 12px rgba(212,175,55,0.5);
+}
+
+.comprar-btn:hover {
+    background: #b8962e;
+    transform: translateY(-2px);
+}
+
+/* Botón Vaciar carrito */
+#vaciarCarrito {
+    width: 100%;
+    padding: 12px;
+    background: #8b0000; /* rojo vino elegante */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all .3s ease;
+    font-weight: bold;
+}
+
+#vaciarCarrito:hover {
+    background: #a30000;
+    transform: translateY(-2px);
+}
+
+/* Icono carrito + contador */
+.carrito-btn svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-dorado);
+    transition: transform .2s ease;
+}
+
+.carrito-btn:hover svg {
+    transform: scale(1.15);
+}
+
+.contador {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: crimson;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
 
 /* ====== MAIN ====== */
 main {
@@ -233,46 +389,119 @@ main h2 {
     box-shadow: 0 6px 14px rgba(212, 175, 55, 0.8); /* más brillo al pasar */
 }
 
+/* =======================================================
+SECCIÓN RESEÑAS – UNIFICADA CON EL ESTILO DE LAS CARDS
+======================================================= */
 
-/* ====== FORMULARIO ====== */
-#contacto {
-    background-color: var(--color-fondo-claro);
-    margin: 40px auto;
-    padding: 30px;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+#reseñas h2 {
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-#contacto h3 {
-    text-align: center;
-    margin-bottom: 15px;
+.reseñas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
+
+.reseña-card {
+    background: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px; 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.reseña-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.reseña-card h4 {
+    color: #333;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.reseña-stars {
+    color: #f4b400; 
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.reseña-text {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* ===========================
+FORMULARIO – ESTILO UNIFICADO
+=========================== */
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+    max-width: 700px;
+    margin: 40px auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-label {
-    font-weight: bold;
+form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
 }
 
-input,
-textarea {
-    padding: 10px;
+form label {
+    color: #333;
+    font-weight: 600;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 18px;
     font-size: 1rem;
+    transition: border-color .2s ease;
 }
 
-input:focus,
-textarea:focus {
+form input:focus,
+form textarea:focus {
+    border-color: #c79f6a;
     outline: none;
-    border-color: var(--color-secundario);
 }
+
+/* BOTÓN ENVIAR – UNIFICADO CON COLORES DE TU PROYECTO */
+.btn-enviar {
+    display: inline-block;
+    background-color: #c79f6a;   /* color dorado elegante */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #b48a57;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(199, 159, 106, 0.4);
+}
+
 
 
 /* ====== FOOTER ====== */
@@ -322,25 +551,4 @@ footer {
     }
 }
 
-}
-/* ====== BOTÓN ENVIAR ====== */
-#contacto button {
-    background-color: var(--color-secundario); /* usa tu color de acento */
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* leve sombra para destacarlo */
-}
-
-#contacto button:hover {
-    background-color: #be9955; /* tono más oscuro al pasar el mouse */
-    transform: translateY(-2px); /* leve movimiento al hover */
-}
-
-#contacto button:active {
-    transform: translateY(0); /* vuelve al lugar cuando se hace clic */
 }

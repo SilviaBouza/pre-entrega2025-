@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #fafafa;
+    color: #333;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    padding: 15px 25px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #b89452;
+    font-weight: 600;
+}
+
+.producto-detalle-contenedor {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.detalle {
+    display: flex;
+    gap: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.detalle img {
+    width: 420px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.descripcion {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: 600;
+    color: #b89452;
+    margin-bottom: 25px;
+}
+
+.btn-agregar {
+    background: #b89452;
+    padding: 14px 24px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.btn-agregar:hover {
+    background: #94723e;
+}
+
+/* 📱 Móvil */
+@media (max-width: 768px) {
+    .detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle img {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .info h2 {
+        font-size: 26px;
+    }
+}
+
