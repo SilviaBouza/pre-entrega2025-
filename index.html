@@ -4,15 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>ORÉLIA | Joyería elegante y perfumes artesanales</title>
 
-    <meta name="description" content="ORÉLIA combina elegancia, luz y diseño para ofrecer joyería y perfumes artesanales únicos. Descubrí nuestros productos exclusivos.">
+    <meta name="description"
+        content="ORÉLIA combina elegancia, luz y diseño para ofrecer joyería y perfumes artesanales únicos. Descubrí nuestros productos exclusivos.">
+    <meta name="keywords" content="perfumes, orélia, cosmética, aromaterapia, belleza">
+    <meta name="author" content="Silvia Bouza">
+    <meta property="og:title" content="ORÉLIA | Lumière et Élégance">
+    <meta property="og:description" content="Productos premium con estilo y elegancia.">
+    <meta property="og:image" content="./assets/img/logo_orelia.png">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Language" content="es">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="/assets/img/logo_orelia.png">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product-detail.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
@@ -55,37 +62,32 @@
 
 
     <main>
+
         <!-- INICIO -->
+        
         <section id="inicio" class="inicio">
             <h2>Inicio</h2>
             <div class="contenedor-video">
                 <video controls poster="./assets/img/logo_orelia.png">
                     <source src="./videos/ORÉLIA.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
-                </video>
             </div>
         </section>
 
         <!-- PRODUCTOS -->
+        
         <section id="producto">
             <h3>Productos</h3>
-
             <div class="product">
-
-
-
-            </div>
-
-
         </section>
-        <!--==============================
+
+                <!--==============================
             SECCIÓN 6 – RESEÑAS DE CLIENTES
             =============================== -->
+
         <section id="reseñas" class="container mt-5 mb-5">
             <h2 class="text-center mb-4">Reseñas de nuestros clientes</h2>
-
             <div class="reseñas-container">
-
                 <div class="reseña-card">
                     <h4>María González</h4>
                     <div class="reseña-stars">★★★★★</div>
@@ -113,8 +115,6 @@
             </div>
         </section>
 
-
-
         <!--CONTACTO-->
 
         <section id="contacto">
@@ -122,43 +122,45 @@
             <form action="https://formbricks.com/" method="POST">
                 <label for="name">Nombre</label>
                 <input type="text" name="name" id="name" required placeholder="Ingrese su nombre">
-
+            
                 <label for="msj">Mensaje</label>
                 <textarea name="msj" id="msj" rows="5" cols="20" placeholder="Escriba su mensaje..."></textarea>
 
                 <button type="submit" class="btn-enviar">Enviar</button>
-
             </form>
         </section>
+
     </main>
 
     <!-- FOOTER -->
+        
     <footer>
         <p>© 2025 ORÉLIA. Todos los derechos reservados.</p>
         <p>Diseño y concepto creativo: Silvia Bouza</p>
     </footer>
-
-    <!-- PANEL DEL CARRITO -->
+    
+        <!-- PANEL DEL CARRITO -->
+    
     <div id="carritoPanel" class="carrito-panel">
         <h3>Tu Carrito</h3>
-        <ul id="listaCarrito">
-        </ul>
+        <ul id="listaCarrito"></ul>
         <div class="total">
             Total: $<span id="totalCarrito">0</span>
         </div>
         <button id="vaciarCarrito">Vaciar Carrito</button>
-    
+
 
         <a class="comprar-btn" href="./pages/pago_exitoso.html">Finalizar compra</a>
 
-
+    
 
     </div>
 
     <script src="./js/script.js"></script>
-    <script src="../scripts/carrito.js"></script>
+    <script src="../js/script-detalle.js"></script>
+    <script src="./scripts/carrito.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    
+
 
 
 </body>
